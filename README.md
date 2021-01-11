@@ -1,17 +1,18 @@
 
-# GetAboutPages
+# GetSocialMediaHandles
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of GetAboutPages is to ...
+The goal of GetSocialMediaHandles is to ...
 
 ## Installation
 
 ``` r
+
 ## Install the current development version from GitHub
 
-devtools::install_github("p3lab/GetABoutPages", dependencies = TRUE)
+devtools::install_github("p3lab/GetSocialMediaHandles", dependencies = TRUE)
 
 ```
 
@@ -20,7 +21,7 @@ devtools::install_github("p3lab/GetABoutPages", dependencies = TRUE)
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(GetAboutPages)
+library(GetSocialMediaHandles)
 ## basic example code
 ```
 
