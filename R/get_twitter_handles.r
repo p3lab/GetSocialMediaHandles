@@ -52,7 +52,7 @@ find_twitter_handle_from_bing <- function(org_name,
 #' @param google_search_results The default is NULL. If you use a Google search result, use a non-NULL value. 
 #' 
 #' @return A list of Twitter handles 
-#' @importFrom textreadr read_html
+#' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_attr
 #' @importFrom rvest html_text
@@ -106,13 +106,15 @@ parse_twitter_handle_from_page <- function(website_address, google_search_result
         
         # Remove extra stuff 
         ## Separate by a special character then select the substring appears before the special character 
-        twitter_handle <- ifelse(str_detect(twitter_handle, "[?]") == TRUE, strsplit(twitter_handle, "?", fixed = TRUE)[[1]][1], twitter_handle)
+        twitter_handle <- ifelse(str_detect(twitter_handle, "[?]") == TRUE, 
+                                 strsplit(twitter_handle, "?", fixed = TRUE)[[1]][1], twitter_handle)
         
         # Error patterns 
         error_patterns <- c("#|@|!")
         
         ## Remove certain first elements of the string vector 
-        twitter_handle <- ifelse(str_detect(twitter_handle,error_patterns), gsub("^.", "", twitter_handle), twitter_handle)
+        twitter_handle <- ifelse(str_detect(twitter_handle,error_patterns), 
+                                 gsub("^.", "", twitter_handle), twitter_handle)
         
         return(twitter_handle)
     } else {return(twitter_handle)}

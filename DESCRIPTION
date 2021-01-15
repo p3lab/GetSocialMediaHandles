@@ -1,6 +1,6 @@
 Package: GetSocialMediaHandles
 Title: Getting social media handles related to an organization
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     c(person(given = "Milan",
            family = "de Vries",
@@ -22,7 +22,7 @@ Imports:
     tibble,
     dplyr,
     magrittr,
-    textreadr, 
+    xml2, 
     httr, 
     rvest,
     purrr,  
