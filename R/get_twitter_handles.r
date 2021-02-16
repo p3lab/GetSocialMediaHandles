@@ -90,9 +90,9 @@ parse_twitter_handle_from_page <- function(website_address, google_search_result
     twitter_handle <- all_links %>% 
         # Find hrefs associated with twitter 
         filter(grepl("twitter.com", href) & 
-                   !grepl("status", href) & # about network connections 
-                   !grepl("share?", href) & # not the org twitter handle but a post they shared
-                   !grepl("intent/tweet?", href) & # not the org twitter handle but a post they shared
+                   !grepl("/status/", href) & # about network connections 
+                   !grepl("/share\\?", href) & # not the org twitter handle but a post they shared
+                   !grepl("intent/tweet\\?", href) & # not the org twitter handle but a post they shared
                    !grepl("twitter.com/wix", href)) %>% # This is the Wix website dev platform 
         # Distinct hrefs 
         distinct(href) %>%
