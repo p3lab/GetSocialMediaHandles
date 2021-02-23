@@ -1,6 +1,6 @@
 Package: GetSocialMediaHandles
 Title: Getting social media handles related to an organization
-Version: 0.0.2
+Version: 0.1.0
 Authors@R: 
     c(person(given = "Milan",
            family = "de Vries",
