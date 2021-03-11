@@ -2,8 +2,10 @@
 
 export("%>%")
 export(find_all)
+export(find_facebook_page_from_org_page)
 export(find_twitter_handle_from_bing)
 export(find_twitter_handle_from_org_page)
+export(parse_facebook_page_from_page)
 export(parse_twitter_handle_from_page)
 importFrom(dplyr,distinct)
 importFrom(dplyr,filter)
