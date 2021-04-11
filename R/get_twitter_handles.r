@@ -54,6 +54,9 @@ find_twitter_handle_from_bing <- function(org_name,
 #'
 #' @return A list of Twitter handles
 #' @importFrom xml2 read_html
+#' @importFrom httr GET
+#' @importFrom httr config
+#' @importFrom purrr possibly
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_attr
 #' @importFrom rvest html_text
