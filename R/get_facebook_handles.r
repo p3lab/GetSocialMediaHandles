@@ -6,6 +6,9 @@
 #'
 #' @return A list of facebook pages
 #' @importFrom xml2 read_html
+#' @importFrom httr GET
+#' @importFrom httr config
+#' @importFrom purrr possibly
 #' @importFrom rvest html_nodes
 #' @importFrom rvest html_attr
 #' @importFrom rvest html_text
