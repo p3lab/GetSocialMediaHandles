@@ -1,0 +1,45 @@
+---
+title: "socialmediahandles"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{socialmediahandles}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(GetSocialMediaHandles)
+```
+
+This vignette describes the basic uses of the `GetSocialMediaHandles` package.
+
+## Intro
+
+In the study of organizational and civic life, it is useful to be able to investigate the public presence of organizations. There is no standard way, however, of identifying the social media handles belonging to a given organization. 
+
+Here we approach this problem by extracting social media handles from an organization's website. As a secondary strategy we also provide functionality to search for social media handles using the Bing search API.
+
+## Twitter handle
+
+Twitter handles are identified on a page by first extracting all links on the page and then filtering for possible twitter handles. Some link cleanup is attempted before returning a handle if one can be found. 
+
+```{r, eval=FALSE}
+## get MoveOn's twitter handle
+tw_handle <- find_twitter_handle_from_org_page("https://moveon.org")
+```
+
+## Facebook page
+
+The `find_facebook_page_from_org_page` function works similarly but looks for a Facebook page instead of a handle. 
+
+```{r, eval=FALSE}
+## get MoveOn's Facebook page
+fb_page <- find_facebook_page_from_org_page("https://moveon.org")
+```
